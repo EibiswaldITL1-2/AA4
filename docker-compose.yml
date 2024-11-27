@@ -1,0 +1,19 @@
+services:
+  web:
+    image: php:apache
+    volumes: 
+     - ./:/var/www/html/
+    ports:
+     - 80:80
+  db:
+    image: mysql:latest
+    volumes:
+     - db:/var/lib/mysql/
+    environment:
+     - MYSQL_ROOT_PASSWORD=acdefGHIJ
+     - MYSQL_DATABASE=webphp
+     - MYSQL_USER=webphpme
+     - MYSQL_PASSWORD=ABCDEFghij
+volumes:
+  db:
+  
